@@ -270,7 +270,7 @@ body {
   justify-content: space-evenly;
   gap: 1rem;
   margin: 1.25rem 0 1.75rem 0;
-  transform: translateY(5.5rem);
+  transform: translateY(4.5rem);
 }
 
 .audio-player {
