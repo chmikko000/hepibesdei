@@ -475,6 +475,10 @@ body {
   background: #ffffff;
   position: relative;
   background-color: #d8d8d8;
+  background-image: url("assets/icons/shark.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #reader-content {
