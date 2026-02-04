@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="lockscreen" class="funnel-display-400">
+        <div class="container-left">
+            <img id="flower-icon" src="assets\icons\flower.png" alt="animation">
+    
+            <div class="header-container">
+                <h2 id="pw-header">Enter Password</h2>
+                <div id="hint-container">
+                    <button id="hint-btn" class>Hint</button>
+                        <p id="hint-text" class="hidden">
+                            tanggal berapa yh 🤔
+                        </p>
+                </div>
+            </div>
+
+            <div id="lockscreen-input-container">
+    
+                <input
+                type="tel"
+                id="real-password"
+                maxlength="6"
+                inputmode="numeric"
+                autocomplete="off"
+            />
+    
+            <div id="fake-input">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+    
+            <button id="unlock-btn" disabled>Unlock</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="home" class="hidden">
+        
+        <img id="main-photo" src="assets\icons\cat-open.png" alt="photo">
+        <div class="from-strip" aria-label="From names">
+            <span class="from-label">from:</span>
+            <div class="name-marquee">
+                <div class="name-track" id="name-track-1"></div>
+                <div class="name-track" id="name-track-2" aria-hidden="true"></div>
+            </div>
+        </div>
+        <div class="home-actions" aria-label="Home actions">
+            <button class="home-action-btn" id="play-btn" type="button">
+                <img id="music-icon" src="assets\icons\music.png" alt="play">
+            </button>
+            <button class="home-action-btn" id="open-bible-btn" type="button">
+                <img id="bible-icon" src="assets\icons\bible.png" alt="bible">
+            </button>
+        </div>
+        <div id="audio-player" class="audio-player hidden" aria-live="polite">
+            <div class="audio-bar">
+                <div class="audio-progress" id="audio-progress"></div>
+            </div>
+            <span id="audio-time" class="audio-time">0:00 / 0:00</span>
+        </div>
+        <div id="messages-container">
+            <button id="open-messages-btn">
+                <img id="messages-icon" src="assets/icons/letter_close.png" alt="messages">
+            </button>
+            <p id="unread-count" class="unread-text">You have X unread messages</p>
+        </div>
+        <div id="messages-window" class="overlay-window">
+
+            <button id="x-btn" aria-label="Close">x</button>
+
+             <div class="messages-header">
+                <p>you have messages from:</p>
+            </div>
+
+            <div class="messages-grid" id="messages-grid">
+
+            </div>
+            <div class="message-reader hidden" id="message-reader">
+                <h3 id="reader-author"></h3>
+                <div id="keyword-container" class="keyword hidden">
+                    <label for="keyword-input">Keyword:</label>
+                    <input id="keyword-input" type="text" autocomplete="off" placeholder="Enter keyword" />
+                </div>
+                <p id="reader-content"></p>
+                <button id="back-to-grid">Back</button>
+            </div>
+    
+        </div>
+
+        <div id="bible-window" class="overlay-window">
+            <button id="bible-x-btn" aria-label="Close">x</button>
+            <div class="message-reader" id="bible-reader">
+                <h3 id="bible-passage">Loading passage...</h3>
+                <p id="bible-verse">Loading verse...</p>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
